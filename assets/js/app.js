@@ -8,7 +8,7 @@ window.onload = function() {
 
 function displayCars(cars) {
     const carListingsDiv = document.querySelector('.car-listings');
-    carListingsDiv.innerHTML = ''; // Clear any previous listings
+    carListingsDiv.innerHTML = '';
 
     if (!cars.length) {
         carListingsDiv.innerHTML = '<p>No cars match the filter criteria.</p>';
@@ -18,10 +18,7 @@ function displayCars(cars) {
     cars.forEach(car => {
         const carDiv = document.createElement('div');
         carDiv.className = 'car-card';
-
-        // Generate a random image number between 1 and 11
         const randomImageNumber = Math.floor(Math.random() * 11) + 1;
-        // Create image path based on the random number
         const imagePath = `./assets/images/car (${randomImageNumber}).webp`;
 
         carDiv.innerHTML = `
@@ -113,7 +110,6 @@ function setupAccordionListeners() {
     accordions.forEach(accordion => {
         accordion.addEventListener('click', function() {
             const parentAccordion = this.parentElement;
-            // Toggle the accordion-open class on the parent element
             parentAccordion.classList.toggle('accordion-open');
         });
     });
@@ -129,7 +125,7 @@ function setupFilterListeners() {
 
 window.onload = function() {
     populateFilters(usedCars);
-    setupFilterListeners();  // Set up the filter change listeners
-    applyFilters();  // Call applyFilters initially
+    setupFilterListeners();
+    applyFilters();
     setupAccordionListeners();
 }

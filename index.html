@@ -10,18 +10,15 @@
 <body>
     <h1>Available Used Cars</h1>
 
-    <!-- Filters Container -->
     <div class="main-container">
         <div class="filters">
             
-            <!-- Year & Mileage Filters Group -->
             <div class="filter-card">
                 <div class="filter-group year-group">
                     <div>
                         <label for="minYear">Year (Min):</label>
                         <select id="minYear">
                             <option value="">No Minimum</option>
-                            <!-- Dynamically populate based on the cars in the dataset -->
                         </select>
                     </div>
 
@@ -29,7 +26,6 @@
                         <label for="maxYear">Year (Max):</label>
                         <select id="maxYear">
                             <option value="">No Maximum</option>
-                            <!-- Dynamically populate based on the cars in the dataset -->
                         </select>
                     </div>
                 </div>
@@ -40,7 +36,6 @@
                 </div>
             </div>
 
-            <!-- Price Filter Group -->
             <div class="filter-card price-group">
                 <div>
                     <label for="minPrice">Price (Min):</label>
@@ -53,45 +48,35 @@
                 </div>
             </div>
 
-            <!-- Make & Color Accordion Filters -->
             <div class="filter-card">
-                <!-- Make Accordion -->
                 <div class="filter-group accordion">
                     <button class="accordion-toggle">Select Make</button>
                     <div class="accordion-content">
                         <select id="make" multiple>
                             <option value="" selected>All</option>
-                            <!-- Dynamically populate based on the cars in the dataset -->
                         </select>
                     </div>
                 </div>
 
-                <!-- Color Accordion -->
                 <div class="filter-group accordion">
                     <button class="accordion-toggle">Select Color</button>
                     <div class="accordion-content">
                         <select id="color" multiple>
                             <option value="" selected>All</option>
-                            <!-- Dynamically populate based on the cars in the dataset -->
                         </select>
                     </div>
                 </div>
             </div>
 
-            <!-- Apply Filters Button -->
             <div class="filter-group action-group">
                 <button onclick="applyFilters()">Apply Filters</button>
             </div>
         </div>    
     </div>
 
-    <!-- Car Listings -->
     <div class="car-listings">
-        <!-- For each car -->
         <div class="car-card-container">
-            <!-- car-card div as previously structured -->
         </div>
-        <!-- ... -->
     </div>
 
     <script src="assets/js/app.js" type="module"></script>
